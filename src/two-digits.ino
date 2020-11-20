@@ -81,26 +81,32 @@ void loop() {
   buttonDown.Update();
   buttonUp.Update();
 
+// count up
   if(buttonDown.clicks != 0) buttonDownClicks = buttonDown.clicks;
   if (buttonDownClicks == 1) {
 	if (count) count--;
   }
 
+// count down
   if(buttonUp.clicks != 0) buttonUpClicks = buttonUp.clicks;
   if (buttonUpClicks == 1) {
         // add code here to stop at 99
 	count++;
   }
 
+// reset to zero
   if(buttonMode.clicks != 0) buttonModeClicks = buttonMode.clicks;
   if(buttonMode.clicks == -1) count = 0;
-			
-
+		
+	
+// write the current count
   display1.updateDigit(1, count % 10, 255, 0, 0);
   display1.updateDigit(2, (count / 10) % 10, 255, 0, 0);
   display1.show();
 
+// reset the buttons
   buttonDownClicks = 0;
   buttonUpClicks = 0;
+  buttonModeClicks = 0;
 
 }
