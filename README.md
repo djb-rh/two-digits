@@ -19,3 +19,6 @@ Ultimately, short presses of the mode button will cycle through the various mode
 The hardware this runs on is the Particle Photon, though other Particle devices should work and it should be relatively easy to 
 also make this work on an Arduino. It uses the clickButton library for the buttons and the NeoPixel library for the dots. 
 
+Here's what my device looks like:
+
+![Image of Front](https://github.com/djb-rh/two-digits/tree/main/images/front.jpg)
